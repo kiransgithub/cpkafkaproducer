@@ -1,0 +1,121 @@
+base_directory: "/tmp/kafka/cui_cfam/cui_cfam_prod_collection_droppoint"
+
+feeds:
+  daily:
+    - name: spur
+      format: json
+      file_pattern: "{date}_spur_latest.json.gz"
+      date_format: "%Y%m%d"
+    - name: rrp
+      format: data
+      file_pattern: "RRPEntitydata2eAuth{date}.data.gz"
+      date_format: "%Y%m%d"
+
+  hourly:
+    - name: tds
+      format: soap_xml
+      file_pattern: "tim-messages.log.{datetime}.gz"
+      date_format: "%Y%m%d%H"
+    - name: esam
+      format: access_log
+      file_pattern: "esam-messages.log.{date}-{hour}.gz"
+      date_format: "%Y%m%d-%H"
+    - name: ice
+      format: soap_xml
+      file_pattern: "vrsxf.log.{date}-{hour}.gz"
+      date_format: "%Y%m%d-%H"
+
+servers:
+  tds:
+    - vp2smemappesv01
+    - vp2smemappesv02
+    - vp2smemappesv03
+    - vp2smemappesv04
+    - vp2smemappesv05
+    - vp2smemappesv06
+    - vp2smemappesv07
+    - vp2smtbappesv01
+    - vp2smtbappesv02
+    - vp2smtbappesv03
+    - vp2smtbappesv04
+    - vp2smtbappesv05
+    - vp2smtbappesv06
+    - vp2smtbappesv07
+    - vp2txapesvprd01
+    - vp2txapesvprd02
+    - vp2txapesvprd03
+    - vp2txapesvprd04
+    - vp2txapesvprd05
+    - vp2txapesvprd06
+    - vp2txapesvprd07
+    - vp2wxapesvprd01
+    - vp2wxapesvprd02
+    - vp2wxapesvprd03
+    - vp2wxapesvprd04
+    - vp2wxapesvprd05
+    - vp2wxapesvprd06
+    - vp2wxapesvprd07
+  esam:
+    - vp2smemappesv01
+    - vp2smemappesv02
+    - vp2smemappesv03
+    - vp2smemappesv04
+    - vp2smemappesv05
+    - vp2smemappesv06
+    - vp2smemappesv07
+    - vp2smtbappesv01
+    - vp2smtbappesv02
+    - vp2smtbappesv03
+    - vp2smtbappesv04
+    - vp2smtbappesv05
+    - vp2smtbappesv06
+    - vp2smtbappesv07
+    - vp2txapesvprd01
+    - vp2txapesvprd02
+    - vp2txapesvprd03
+    - vp2txapesvprd04
+    - vp2txapesvprd05
+    - vp2txapesvprd06
+    - vp2txapesvprd07
+    - vp2wxapesvprd01
+    - vp2wxapesvprd02
+    - vp2wxapesvprd03
+    - vp2wxapesvprd04
+    - vp2wxapesvprd05
+    - vp2wxapesvprd06
+    - vp2wxapesvprd07
+  icce:
+    - vp2smemappicce1
+    - vp2smemappicce2
+    - vp2smemappicce3
+    - vp2smemappicce8
+    - vp2smemappicce9
+    - vp2smemappicce10
+    - vp2smemappicce11
+    - vp2smemappicce12
+    - vp2smtbappicce1
+    - vp2smtbappicce2
+    - vp2smtbappicce4
+    - vp2smtbappicce10
+    - vp2smtbappicce11
+    - vp2smtbappicce13
+
+
+processing:
+  batch_size: 500
+  max_threads: 50
+  retry_attempts: 3
+  retry_delay: 5
+  error_threshold: 0.1
+
+kafka:
+  config_file: "kafka_config.yaml"
+
+output_directories:
+  processed: "processed"
+  partially_processed: "partially_processed"
+  failed: "failed_to_process"
+kafka_config_file: "kafka_conf.yaml"
+kafka_load_batch_size: 500
+
+

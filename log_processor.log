@@ -1,0 +1,26 @@
+2024-10-11 13:12:32,068 - __main__ - INFO - Configuration loaded successfully from mixed_feeds_config.yaml
+2024-10-11 13:12:40,910 - __main__ - INFO - Configuration loaded successfully from mixed_feeds_config.yaml
+2024-10-11 13:13:09,018 - __main__ - INFO - Configuration loaded successfully from mixed_feeds_config.yaml
+2024-10-11 13:13:25,315 - __main__ - INFO - Configuration loaded successfully from mixed_feeds_config.yaml
+2024-10-11 13:13:25,316 - root - INFO - Loaded Kafka configuration: bootstrap.servers=localhost:9092, topic=mem_va_scans
+2024-10-11 13:15:25,308 - __main__ - INFO - Configuration loaded successfully from mixed_feeds_config.yaml
+2024-10-11 13:15:25,310 - root - INFO - Loaded Kafka configuration: bootstrap.servers=localhost:9092, topic=mem_va_scans
+2024-10-11 13:15:25,339 - _spur - INFO - Starting processing for /spur
+2024-10-11 13:16:01,008 - __main__ - INFO - Configuration loaded successfully from mixed_feeds_config.yaml
+2024-10-11 13:16:01,010 - root - INFO - Loaded Kafka configuration: bootstrap.servers=localhost:9092, topic=mem_va_scans
+2024-10-11 13:16:01,042 - _spur - INFO - Starting processing for /spur
+2024-10-11 14:03:49,829 - __main__ - INFO - Configuration loaded successfully from mixed_feeds_config.yaml
+2024-10-11 14:03:49,831 - root - INFO - Loaded Kafka configuration: bootstrap.servers=localhost:9092, topic=mem_va_scans
+2024-10-11 14:03:49,876 - _spur - INFO - Starting processing for /spur
+2024-10-11 14:03:49,876 - _spur - INFO - Processing file: /tmp/kafka/cui_cfam/cui_cfam_prod_collection_droppoint/spur/20241011_spur_latest.json.gz
+2024-10-11 14:03:49,878 - KafkaProducer - INFO - Asynchronously flushing messages...
+2024-10-11 16:14:31,441 - __main__ - INFO - Configuration loaded successfully from mixed_feeds_config.yaml
+2024-10-11 16:14:31,442 - root - INFO - Loaded Kafka configuration: bootstrap.servers=localhost:9092, topic=mem_va_scans
+2024-10-11 16:14:31,492 - _spur - INFO - Starting processing for /spur
+2024-10-11 16:14:31,494 - _spur - INFO - Processing file: /tmp/kafka/cui_cfam/cui_cfam_prod_collection_droppoint/spur/20241011_spur_latest.json.gz
+2024-10-11 16:14:31,498 - KafkaProducer - INFO - Asynchronously flushing messages...
+2024-10-11 16:19:31,573 - KafkaProducer - ERROR - Message delivery failed: KafkaError{code=_MSG_TIMED_OUT,val=-192,str="Local: Message timed out"}
+2024-10-11 16:19:31,577 - KafkaProducer - INFO - Appending to failed_message list for retrying...
+2024-10-11 16:19:31,583 - _spur - INFO - File successfully processed: /tmp/kafka/cui_cfam/cui_cfam_prod_collection_droppoint/spur/20241011_spur_latest.json.gz
+2024-10-11 16:19:31,583 - _spur - INFO - Finished processing for /spur
+2024-10-11 16:19:31,584 - KafkaProducer - INFO - Asynchronously flushing messages...

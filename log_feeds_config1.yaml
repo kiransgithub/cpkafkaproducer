@@ -1,0 +1,43 @@
+base_directory: "/kafka/cui_cfam/cui_cfam_prod_collection_droppoint/portal"
+servers:
+  - iv1rpmgle2e0007
+  - ic1rpmgle2e0007
+
+feed_name:
+  - AdvCIC
+  - ComSrvcs
+  - eAuth_2.0
+  - ePostCard
+  - eSrvcs-API
+  - eSrvcs-TDS
+  - eSrvcs-TIN
+  - EUP_ComSrvcs
+  - EUP_eSrvcs-TDS
+  - EUP_eSrvcs-TIN
+  - FATCA-QI
+  - ICCE-Core
+  - ICCE-FATCA
+  - ICCE-IRE&F
+  - ICCE-ModIEIN
+  - ICCE-WMAR
+  - ICCE-WS
+  - MeF-A2A
+  - MeF-A2A_ALT
+  - MeF-IFA_ATS
+  - MeF-IFA_PRD
+  - OnlineAccount
+  - SADI
+  - SEmail
+
+file_pattern: "*{0..23}Z.log.gz"
+processed_dir: "processed"
+partial_dir: "partial"
+failed_dir: "failed"
+kafka_config_file: "kafka_config.yaml"
+checkpoint_file: "checkpoint.json"
+kafka_load_batch_size: 500
+max_threads: 50
+
+retry_attempts: 3
+retry_delay: 5  # seconds
+error_threshold: 0.1  # 10% of messages can fail before considering a file as completely failed

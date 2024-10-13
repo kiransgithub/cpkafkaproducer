@@ -1,0 +1,13 @@
+topic_name: mem_va_scans
+messages_per_sending: 100000
+kafka_conf:
+  bootstrap.servers:
+    - localhost:9092
+  security.protocol: SSL
+  ssl.key.location: client.key
+  ssl.certificate.location: client.crt
+  ssl.ca.location: ca-cert.pem
+  compression.codec: gzip
+  compression.level: 9
+  request.required.acks: -1  # Acknowledge ALL. That is, data must be written to the leader,
+  #and the N minimum followers before Kafka broker reports about an acknowledgment message to this producer.
